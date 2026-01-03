@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>CipherPass – Generator</title>
+</head>
+<body>
+
+<header>
+  <div class="container">
+      <nav>
+        <div class="logo">CIPHERPASS</div>
+          <div class="nav-links" id="navLinks">
+            <a href="index.html">Checker</a>
+            <a href="generator.html" class="active">Generator</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="container">
+  <div class="card">
+    <h2>Password Generator</h2>
+    <p class="text-muted">
+      Generate cryptographically secure passwords locally in your browser.
+    </p>
+
+    <br />
+
+    <!-- Length -->
+    <label class="text-muted">
+      Length: <strong><span id="length-value">16</span></strong>
+    </label>
+    <input
+      type="range"
+      id="length"
+      min="8"
+      max="32"
+      value="16"
+    />
+
+    <br /><br />
+
+    <!-- Options -->
+    <div class="options">
+      <label><input type="checkbox" id="lower" checked /> Lowercase</label><br />
+      <label><input type="checkbox" id="upper" checked /> Uppercase</label><br />
+      <label><input type="checkbox" id="numbers" checked /> Numbers</label><br />
+      <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+    </div>
+
+    <br />
+
+    <!-- Generate Button -->
+    <button id="generate">Generate Password</button>
+
+    <br /><br />
+
+    <!-- Output -->
+    <input
+      type="text"
+      id="output"
+      placeholder="Your secure password will appear here"
+      readonly
+    />
+
+    <br /><br />
+
+    <!-- Analysis -->
+    <p class="text-muted">
+      Entropy: <span id="gen-entropy">—</span>
+    </p>
+
+    <div class="crack-grid">
+      <div class="crack-box">
+        <h4>GPU Attack</h4>
+        <p id="gen-crack">—</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script type="module" src="js/generator.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

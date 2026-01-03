@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>CipherPass – About</title>
+</head>
+<body>
+
+<header>
+  <div class="container">
+      <nav>
+        <div class="logo">CIPHERPASS</div>
+          <div class="nav-links" id="navLinks">
+            <a href="index.html">Checker</a>
+            <a href="generator.html">Generator</a>
+            <a href="about.html" class="active">About</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="container">
+  <div class="card">
+    <h2>About CipherPass</h2>
+
+    <p class="text-muted">
+      CipherPass is a client-side password security tool designed to help users
+      understand, generate, and evaluate strong passwords using modern security
+      principles.
+    </p>
+
+    <br />
+
+    <h3>What CipherPass Does</h3>
+    <p class="text-muted">
+      CipherPass provides two main features:
+    </p>
+
+    <ul class="text-muted">
+      <li>
+        <strong>Password Strength Checker</strong>: analyzes passwords using
+        entropy, pattern detection, and real-world attack models.
+      </li>
+      <li>
+        <strong>Password Generator</strong>: creates cryptographically strong
+        passwords locally in your browser.
+      </li>
+    </ul>
+
+    <br />
+
+    <h3>How Strength Is Measured</h3>
+    <p class="text-muted">
+      Password strength is calculated using Shannon entropy based on character
+      diversity and length, combined with structural penalties for:
+    </p>
+
+    <ul class="text-muted">
+      <li>Common dictionary words and leaked passwords</li>
+      <li>Keyboard patterns and sequences</li>
+      <li>Repeated characters and predictable substitutions</li>
+      <li>Passphrases composed solely of lowercase words</li>
+    </ul>
+
+    <p class="text-muted">
+      Crack time estimates simulate multiple attacker models, ranging from
+      online rate-limited attacks to nation-state-level offline attacks.
+    </p>
+
+    <br />
+
+    <h3>Security & Privacy</h3>
+    <p class="text-muted">
+      CipherPass runs entirely in your browser. No passwords are transmitted,
+      stored, logged, or sent to any server.
+    </p>
+
+    <p class="text-muted">
+      All calculations happen locally using JavaScript. Even compromised
+      password detection is performed against a locally loaded wordlist.
+    </p>
+
+    <br />
+
+    <h3>Educational Purpose</h3>
+    <p class="text-muted">
+      CipherPass is intended as an educational and practical tool. Crack time
+      estimates are approximations designed to help users make better security
+      decisions, not absolute guarantees.
+    </p>
+
+    <p class="text-muted">
+      Real-world security depends on many factors, including hashing algorithms,
+      salting, and rate-limiting protections.
+    </p>
+
+  </div>
+</div>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

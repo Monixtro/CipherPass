@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CipherPass</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">CIPHERPASS</div>
+          <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Checker</a>
+            <a href="generator.html">Generator</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      </nav>
+    </div>
+  </header>
+
+<div class="container">
+  <div class="card">
+    <h2>Password Strength Checker</h2>
+    <p class="text-muted">Analyze your password securely and locally.</p>
+
+    <br />
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter your password"
+      autocomplete="off"
+    />
+
+    <div class="strength-bar">
+      <div id="strength-fill" class="strength-fill"></div>
+    </div>
+
+    <p class="text-muted">Entropy: <span id="entropy">0 bits</span></p>
+
+    <div class="crack-grid">
+      <div class="crack-box">
+        <h4>Online Attack</h4>
+        <p id="crack-online">—</p>
+      </div>
+      <div class="crack-box">
+        <h4>GPU Attack</h4>
+        <p id="crack-gpu">—</p>
+      </div>
+      <div class="crack-box">
+        <h4>Botnet Attack</h4>
+        <p id="crack-botnet">—</p>
+      </div>
+      <div class="crack-box">
+        <h4>Nation-State</h4>
+        <p id="crack-nation">—</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script type="module" src="js/checker.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>
